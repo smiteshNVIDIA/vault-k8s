@@ -50,7 +50,7 @@ type Handler struct {
 // webhook request for admission control. This should be registered or
 // served via an HTTP server.
 func (h *Handler) Handle(w http.ResponseWriter, r *http.Request) {
-	h.Log.Info("Request received 2", "Method", r.Method, "URL", r.URL)
+	h.Log.Info("Request received 3", "Method", r.Method, "URL", r.URL)
 
 	if ct := r.Header.Get("Content-Type"); ct != "application/json" {
 		msg := fmt.Sprintf("Invalid content-type: %q", ct)
